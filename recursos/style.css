@@ -2,7 +2,10 @@
 
 /* Variáveis de cores */
 :root {
-    --background-color: ;
+    --background-color: #000706;
+    --box-color: #00272d;
+    --text-color: #bfac8b;
+    --btn-color: #0c7e7e;
 }
 
 
@@ -16,7 +19,8 @@
 
 
 /* Centralizando a div */
-.container {
+.layout {
+    background-color: var(--background-color);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -25,8 +29,8 @@
     justify-content: center;
 }
 
-.box {
-    background-color: aqua;
+.layout .box {
+    background-color: var(--box-color);
     width: 25rem;
     max-width: 30rem;
     height: 30rem;
@@ -34,6 +38,39 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     border-radius: 20px;
+}
+
+.layout .box .nav {
+    padding-top: 4rem;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.layout .box .nav h3,
+.layout .box .login label {
+    color: var(--text-color);
+}
+
+.layout .box .login {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layout .box .login form,
+.layout .box .login .btn {
+    width: 100%;
+}
+
+
+.layout .box .login .btn button {
+    background-color: var(--btn-color);
+    width: 100%;
 }
